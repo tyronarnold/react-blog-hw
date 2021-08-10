@@ -15,7 +15,7 @@ function App() {
                 <Nav />
                 <Switch>
                     <Route path="/" exact component={Main} />
-                    <Route path="/my-react-app" exact component={Main} />
+                    <Route path="/react-blog-hw" exact component={Main} />
                     <Route path="/blog" exact component={Blog} />
                     <Route path="/blog/:id" component={SingleBlog} />
                     <Route component={NotFound} />
