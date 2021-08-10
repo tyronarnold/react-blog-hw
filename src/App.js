@@ -1,27 +1,28 @@
 import React from 'react';
 import Nav from './components/Nav';
-import About from './components/About';
-import Shop from './components/Shop';
-import Home from './components/Home';
-import Item from './components/Item';
+import Main from './components/Main';
+import Blog from './components/Blog';
+import NotFound from './components/NotFound';
+import SingleBlog from './components/SingleBlog';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
 
 function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Nav />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/shop" exact component={Shop} />
-          <Route path="/shop:id" component={Item} />
-        </Switch>
-      </div>
-    </Router>
-  );
+    return (
+        <Router>
+            <div className="App" >
+                <Nav />
+                <Switch>
+                    <Route path="/" exact component={Main} />
+                    <Route path="/react-blog-hw" exact component={Main} />
+                    <Route path="/blog" exact component={Blog} />
+                    <Route path="/blog/:id" component={SingleBlog} />
+                    <Route component={NotFound} />
+                </Switch>
+            </div>
+        </Router>
+    );
 }
 
 export default App;
