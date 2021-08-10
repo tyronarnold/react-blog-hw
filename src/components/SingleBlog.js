@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Card, Col } from 'react-bootstrap'
+import { Button, Card, Col, Spinner } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 
 
@@ -26,7 +26,7 @@ const SingleBlog = (props) => {
                 <h3>Title: {title}</h3>
             </Card.Title>
             <Card.Text style={{ paddingLeft: '30px', paddingRight: '30px' }} >
-                <p>Single Blog Summary:{summary}</p>
+                <p>Single Blog Summary: {summary}</p>
             </Card.Text>
 
             <Link to="/blog">
